@@ -194,5 +194,8 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     # 异常处理
-    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
-}
+    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',}
+
+# 替换系统的User需要通过设置AUTH_USER_MODEL来实现
+# 子应用名.模型类名  只能有一个点
+AUTH_USER_MODEL = 'users.User'
