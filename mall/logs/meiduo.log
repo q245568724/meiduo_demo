@@ -62,3 +62,99 @@ AttributeError: 'UserManager' object has no attribute 'filters'
 ERROR 2019-02-19 11:48:36,651 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 500 16966
 INFO 2019-02-19 11:52:17,878 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 200 11
 INFO 2019-02-19 12:07:17,939 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 13:09:57,318 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:09:57,322 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 25, in get
+    text,image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-02-19 13:09:57,357 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17269
+INFO 2019-02-19 13:13:18,570 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:13:18,585 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 27, in get
+    text,image = Captcha.generate_captcha()
+TypeError: generate_captcha() missing 1 required positional argument: 'self'
+ERROR 2019-02-19 13:13:18,612 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17259
+INFO 2019-02-19 13:13:57,546 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:13:57,560 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 27, in get
+    text,image = Captcha.generate_captcha(image_code_id)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/libs/captcha/captcha.py", line 214, in generate_captcha
+    self.initialize()
+AttributeError: 'str' object has no attribute 'initialize'
+ERROR 2019-02-19 13:13:57,593 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17371
+INFO 2019-02-19 13:16:04,100 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:16:04,118 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 26, in get
+    text,image = captcha.generate_captcha(image_code_id)
+TypeError: generate_captcha() takes 1 positional argument but 2 were given
+ERROR 2019-02-19 13:16:04,145 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17268
+INFO 2019-02-19 13:16:27,027 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+INFO 2019-02-19 13:16:27,064 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3068

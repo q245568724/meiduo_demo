@@ -20,5 +20,5 @@ class RegisterUsernameAPIView(APIView):
         # 判断用户是否注册
         # 查询用户名的数量,0就是没有注册,1就是有注册
         count = User.objects.filter(username=username).count()
-
+        #
         return Response({'count':count})
