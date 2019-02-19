@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="864d00b9-8b2a-48d6-a127-348b0f7e855e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/utils/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/meiduo_demo.iml" afterPath="$PROJECT_DIR$/.idea/meiduo_demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/mall/__init__.py" afterPath="$PROJECT_DIR$/mall/mall/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/mall/settings.py" afterPath="$PROJECT_DIR$/mall/mall/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/users/models.py" afterPath="$PROJECT_DIR$/mall/apps/users/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,24 +20,31 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
+            <state relative-caret-position="242">
+              <caret line="184" column="10" lean-forward="true" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mall/apps/users/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
-                <marker date="1550495193874" expanded="true" signature="1022:1261" ph="..." />
-                <marker date="1550495193874" expanded="true" signature="2326:2578" ph="..." />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exceptions.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mall/utils/exceptions.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#75#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-4">
+              <caret line="292" column="26" lean-forward="false" selection-start-line="292" selection-start-column="26" selection-end-line="292" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +82,7 @@
         <option value="$PROJECT_DIR$/mall/mall/__init__.py" />
         <option value="$PROJECT_DIR$/mall/utils/exceptions.py" />
         <option value="$PROJECT_DIR$/mall/mall/settings.py" />
+        <option value="$PROJECT_DIR$/mall/apps/users/models.py" />
       </list>
     </option>
   </component>
@@ -140,25 +143,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meiduo_demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meiduo_demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mall" />
+              <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,23 +443,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
-          <folding>
-            <marker date="1550495193874" expanded="true" signature="1022:1261" ph="..." />
-            <marker date="1550495193874" expanded="true" signature="2326:2578" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall/utils/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <element signature="e#0#75#0" expanded="true" />
+            <element signature="e#0#75#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="184" column="10" lean-forward="true" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1052">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="292" column="26" lean-forward="false" selection-start-line="292" selection-start-column="26" selection-end-line="292" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/apps/users/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
