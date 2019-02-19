@@ -168,3 +168,6 @@ INFO 2019-02-19 14:24:40,638 basehttp 124 "GET /verifications/imagecodes/fb1126a
 INFO 2019-02-19 14:24:41,963 basehttp 124 "GET /verifications/imagecodes/fb8798a5-4c19-464f-86f6-5e2452b99a45/ HTTP/1.1" 200 3193
 INFO 2019-02-19 14:24:42,542 basehttp 124 "GET /verifications/imagecodes/454b41b6-e60e-4a45-aa78-59a4c0e1bc3b/ HTTP/1.1" 200 3123
 INFO 2019-02-19 14:24:43,073 basehttp 124 "GET /verifications/imagecodes/67c1f6e8-ad85-4c20-b269-8b4811e414e0/ HTTP/1.1" 200 3589
+INFO 2019-02-19 14:46:25,088 basehttp 124 "GET /verifications/imagecodes/de5aadbf-8a0e-49d0-baaf-65b0f96a41f1/ HTTP/1.1" 200 3013
+INFO 2019-02-19 14:46:27,220 basehttp 124 "GET /verifications/imagecodes/5e78732d-2f65-4c44-a3aa-427e642f795f/ HTTP/1.1" 200 3432
+INFO 2019-02-19 14:46:28,029 basehttp 124 "GET /verifications/imagecodes/e03df854-be10-4e81-99a5-442880efd5dc/ HTTP/1.1" 200 3520
