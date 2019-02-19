@@ -1,0 +1,64 @@
+WARNING 2019-02-19 11:44:37,571 base 152 Not Found: /users/username/count
+WARNING 2019-02-19 11:44:37,575 basehttp 124 "POST /users/username/count HTTP/1.1" 404 2195
+WARNING 2019-02-19 11:44:43,841 base 152 Not Found: /users/username/count
+WARNING 2019-02-19 11:44:43,846 basehttp 124 "GET /users/username/count HTTP/1.1" 404 2194
+WARNING 2019-02-19 11:45:13,060 base 152 Not Found: /users/username/ddd/count
+WARNING 2019-02-19 11:45:13,070 basehttp 124 "GET /users/username/ddd/count HTTP/1.1" 404 2206
+WARNING 2019-02-19 11:45:26,936 base 152 Not Found: /users/usernames/ddd/count
+WARNING 2019-02-19 11:45:26,939 basehttp 124 "GET /users/usernames/ddd/count HTTP/1.1" 404 2209
+WARNING 2019-02-19 11:45:33,025 base 152 Not Found: /users/usernames/ddd/count/
+WARNING 2019-02-19 11:45:33,029 basehttp 124 "GET /users/usernames/ddd/count/ HTTP/1.1" 404 2212
+WARNING 2019-02-19 11:47:00,250 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:00,256 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:01,349 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:01,356 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:02,497 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:02,504 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:27,219 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:27,227 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+ERROR 2019-02-19 11:48:22,646 exception 135 Internal Server Error: /users/users/usernames/ddddd/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 22, in get
+    count = User.objects.filters(username=username).count()
+AttributeError: 'UserManager' object has no attribute 'filters'
+ERROR 2019-02-19 11:48:22,723 basehttp 124 "GET /users/users/usernames/ddddd/count/ HTTP/1.1" 500 16990
+ERROR 2019-02-19 11:48:36,620 exception 135 Internal Server Error: /users/usernames/ddddd/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 22, in get
+    count = User.objects.filters(username=username).count()
+AttributeError: 'UserManager' object has no attribute 'filters'
+ERROR 2019-02-19 11:48:36,651 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 500 16966
+INFO 2019-02-19 11:52:17,878 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 12:07:17,939 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
