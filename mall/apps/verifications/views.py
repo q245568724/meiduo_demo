@@ -1,10 +1,14 @@
+import random
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
 from libs.captcha.captcha import captcha
+from libs.yuntongxun.sms import CCP
 from verifications.serializers import RegisterSmsSerializer
 
 """
@@ -29,7 +33,7 @@ class RegisterImageAPIView(APIView):
         # 链接redis
         redis_conn = get_redis_connection('code')
         # 设置图片
-        redis_conn.setex('img_'+image_code_id,60,text)
+        redis_conn.setex('img_%s'%image_code_id,60,text)
         # 4 返回图片响应
         return HttpResponse(image,content_type='image/jpeg')
         # return Response()
@@ -58,6 +62,12 @@ class RegisterSmscodeAPIView(APIView):
         serializer = RegisterSmsSerializer(data=params)
         serializer.is_valid(raise_exception=True)
         # 3 生成短信
+        sms_code = '%06d'%random.randint(0,999999)
         # 4 将短信保存在redis中
+        redis_conn =get_redis_connection('code')
+        redis_conn.setex('sms_'+mobile,5*60,sms_code)
         # 5 使用云通讯发送短信
+        CCP().send_template_sms(mobile,[sms_code,5],'1')
         # 6 返回响应
+        return Response({'msg':'ok'})
+

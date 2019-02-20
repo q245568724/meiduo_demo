@@ -174,3 +174,195 @@ INFO 2019-02-19 14:46:27,220 basehttp 124 "GET /verifications/imagecodes/5e78732
 INFO 2019-02-19 14:46:28,029 basehttp 124 "GET /verifications/imagecodes/e03df854-be10-4e81-99a5-442880efd5dc/ HTTP/1.1" 200 3520
 =======
 >>>>>>> 6c434f3d206b553fa9330fae690f47af94fe278e
+INFO 2019-02-20 15:42:30,758 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+INFO 2019-02-20 15:42:30,828 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3008
+WARNING 2019-02-20 15:42:30,960 base 152 Not Found: /favicon.ico
+WARNING 2019-02-20 15:42:30,971 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2182
+INFO 2019-02-20 15:42:34,414 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3614
+INFO 2019-02-20 15:45:48,956 basehttp 124 "GET /verifications/imagecodes/34252/ HTTP/1.1" 200 3145
+INFO 2019-02-20 15:46:22,511 basehttp 124 "GET /verifications/imagecodes/34251/ HTTP/1.1" 200 3574
+INFO 2019-02-20 15:49:16,911 basehttp 124 "GET /verifications/imagecodes/ed7c7030-0c4b-415a-a4b0-a76da679171b/ HTTP/1.1" 200 3248
+INFO 2019-02-20 15:49:22,691 basehttp 124 "GET /verifications/imagecodes/5fa24226-605f-4a61-ad7f-c1821e6b8094/ HTTP/1.1" 200 3027
+ERROR 2019-02-20 15:51:28,531 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:51:28,730 basehttp 124 "GET /verifications/smscodes/13111111111/?text=krwt&image_code_id=5fa24226-605f-4a61-ad7f-c1821e6b8094 HTTP/1.1" 500 88812
+INFO 2019-02-20 15:52:37,747 basehttp 124 "GET /verifications/imagecodes/ba026cd8-bc35-4129-af1e-2016c7d2f01a/ HTTP/1.1" 200 3622
+ERROR 2019-02-20 15:53:23,859 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:53:24,048 basehttp 124 "GET /verifications/smscodes/13111111111/?text=lnmk&image_code_id=ba026cd8-bc35-4129-af1e-2016c7d2f01a HTTP/1.1" 500 88812
+ERROR 2019-02-20 15:54:18,657 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:54:18,856 basehttp 124 "GET /verifications/smscodes/13111111111/?text=lnmk&image_code_id=ba026cd8-bc35-4129-af1e-2016c7d2f01a HTTP/1.1" 500 88812
+INFO 2019-02-20 16:00:02,894 basehttp 124 "GET /verifications/imagecodes/7decab95-22b5-4887-9a79-b16120cfc680/ HTTP/1.1" 200 3314
+ERROR 2019-02-20 16:01:01,211 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:01:01,410 basehttp 124 "GET /verifications/smscodes/13111111111/?text=k6ih&image_code_id=7decab95-22b5-4887-9a79-b16120cfc680 HTTP/1.1" 500 88812
+INFO 2019-02-20 16:03:45,816 basehttp 124 "GET /verifications/imagecodes/2b196af9-c6bf-4823-94fa-872bdae408ff/ HTTP/1.1" 200 2892
+ERROR 2019-02-20 16:04:24,751 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:04:24,934 basehttp 124 "GET /verifications/smscodes/13111111111/?text=7ijl&image_code_id=2b196af9-c6bf-4823-94fa-872bdae408ff HTTP/1.1" 500 88812
+INFO 2019-02-20 16:07:48,558 basehttp 124 "GET /verifications/imagecodes/52cfa8f8-bfc5-4057-9c4c-49563c338b32/ HTTP/1.1" 200 3383
+ERROR 2019-02-20 16:08:27,687 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:08:27,982 basehttp 124 "GET /verifications/smscodes/13111111111/?text=aewx&image_code_id=52cfa8f8-bfc5-4057-9c4c-49563c338b32 HTTP/1.1" 500 88812
+INFO 2019-02-20 16:44:36,346 basehttp 124 "GET /verifications/imagecodes/ffaa49b9-5f14-4727-9d8c-9d13e580685b/ HTTP/1.1" 200 2852
+INFO 2019-02-20 16:45:25,377 basehttp 124 "GET /verifications/smscodes/13111111111/?text=opeb&image_code_id=ffaa49b9-5f14-4727-9d8c-9d13e580685b HTTP/1.1" 200 12
+INFO 2019-02-20 16:46:03,514 basehttp 124 "GET /verifications/smscodes/13111111111/?text=opeb&image_code_id=ffaa49b9-5f14-4727-9d8c-9d13e580685b HTTP/1.1" 200 12
+INFO 2019-02-20 16:47:04,868 basehttp 124 "GET /verifications/imagecodes/9ba162cc-0383-4c27-ae37-be77445d7647/ HTTP/1.1" 200 3140
+INFO 2019-02-20 16:48:42,694 basehttp 124 "GET /verifications/smscodes/13111111111/?text=ddyv&image_code_id=9ba162cc-0383-4c27-ae37-be77445d7647 HTTP/1.1" 200 12
+INFO 2019-02-20 16:57:08,252 basehttp 124 "GET /verifications/imagecodes/145ee2d1-5d11-4bc6-b537-bbd107770042/ HTTP/1.1" 200 2786
+ERROR 2019-02-20 16:57:50,308 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:57:50,474 basehttp 124 "GET /verifications/smscodes/13111111111/?text=st5y&image_code_id=145ee2d1-5d11-4bc6-b537-bbd107770042 HTTP/1.1" 500 88812
+ERROR 2019-02-20 16:58:21,414 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:58:21,624 basehttp 124 "GET /verifications/smscodes/13111111111/?text=st5y&image_code_id=145ee2d1-5d11-4bc6-b537-bbd107770042 HTTP/1.1" 500 88812
+INFO 2019-02-20 17:08:21,156 basehttp 124 "GET /verifications/imagecodes/7a23a1da-dab5-40ba-a861-299da595845c/ HTTP/1.1" 200 3453
+INFO 2019-02-20 17:11:56,697 basehttp 124 "GET /verifications/imagecodes/d50a9bc5-6fe0-40d5-811c-1b6bdb5e63f9/ HTTP/1.1" 200 3330
+INFO 2019-02-20 17:15:34,307 basehttp 124 "GET /verifications/imagecodes/20f9e10a-38f5-4b83-b1e9-de27a5fee6b6/ HTTP/1.1" 200 3283
+ERROR 2019-02-20 17:16:12,985 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 17:16:13,165 basehttp 124 "GET /verifications/smscodes/13111111111/?text=shah&image_code_id=d50a9bc5-6fe0-40d5-811c-1b6bdb5e63f9 HTTP/1.1" 500 88812
+INFO 2019-02-20 17:38:02,232 basehttp 124 "GET /verifications/imagecodes/ce0e4f45-d7a8-4e54-b52d-b0e78919e146/ HTTP/1.1" 200 2902
+INFO 2019-02-20 17:38:28,278 basehttp 124 "GET /verifications/imagecodes/0cc963ae-ade1-470e-8852-d7430845b770/ HTTP/1.1" 200 2680
+INFO 2019-02-20 17:40:52,191 basehttp 124 "GET /verifications/imagecodes/f441be05-4353-40f4-ab43-4729b5b054d6/ HTTP/1.1" 200 3296
+INFO 2019-02-20 17:43:39,269 basehttp 124 "GET /verifications/imagecodes/858c41db-c855-4a79-aae6-bfa59513b397/ HTTP/1.1" 200 3212
+INFO 2019-02-20 17:44:03,887 basehttp 124 "GET /verifications/imagecodes/3572848f-cbe4-425e-8009-192d885a8c74/ HTTP/1.1" 200 2974
+INFO 2019-02-20 17:44:12,021 basehttp 124 "GET /verifications/imagecodes/ebd5f79f-16d0-4d85-8c50-8aa47da441d6/ HTTP/1.1" 200 3457
+INFO 2019-02-20 17:44:15,448 basehttp 124 "GET /verifications/imagecodes/641bd915-99b1-4094-b067-aae90723e822/ HTTP/1.1" 200 3319
+INFO 2019-02-20 17:44:21,117 basehttp 124 "GET /verifications/smscodes/13111111111/?text=xyjq&image_code_id=641bd915-99b1-4094-b067-aae90723e822 HTTP/1.1" 200 12
