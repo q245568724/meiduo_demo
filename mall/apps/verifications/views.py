@@ -67,7 +67,7 @@ class RegisterSmscodeAPIView(APIView):
         redis_conn =get_redis_connection('code')
         redis_conn.setex('sms_'+mobile,5*60,sms_code)
         # 5 使用云通讯发送短信
-        CCP().send_template_sms(mobile,[sms_code,5],'1')
+        # CCP().send_template_sms(mobile,[sms_code,5],'1')
         # 6 返回响应
         return Response({'msg':'ok'})
 
