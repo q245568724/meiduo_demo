@@ -82,5 +82,9 @@ class RegiserUserSerializer(serializers.ModelSerializer):
         # user = User.objects.create(**validated_data)
         # 2  现在的数据满足要求了 可以让父类执行
         user = super().create(validated_data)
+        # 3 密码还是铭文
+        # 我们需要加密
+        user.set_password(validated_data['password'])
+        user.save()
 
         return user

@@ -487,3 +487,7 @@ INFO 2019-02-21 18:07:50,681 basehttp 124 "GET /users/usernames/itcast/count/ HT
 INFO 2019-02-21 18:07:52,084 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
 WARNING 2019-02-21 18:09:24,090 basehttp 124 "POST /users/ HTTP/1.1" 400 49
 INFO 2019-02-21 18:09:24,134 basehttp 124 "POST /users/ HTTP/1.1" 200 66
+INFO 2019-02-21 19:11:55,970 basehttp 124 "GET /verifications/imagecodes/4bde7a8f-af68-4993-b5a9-d7631e604b82/ HTTP/1.1" 200 3496
+INFO 2019-02-21 19:11:59,193 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 19:22:23,728 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 20:07:24,704 basehttp 124 "GET /verifications/imagecodes/87b63d3e-3516-4751-8f46-6d2416a57e0a/ HTTP/1.1" 200 3573
