@@ -366,3 +366,124 @@ INFO 2019-02-20 17:44:03,887 basehttp 124 "GET /verifications/imagecodes/3572848
 INFO 2019-02-20 17:44:12,021 basehttp 124 "GET /verifications/imagecodes/ebd5f79f-16d0-4d85-8c50-8aa47da441d6/ HTTP/1.1" 200 3457
 INFO 2019-02-20 17:44:15,448 basehttp 124 "GET /verifications/imagecodes/641bd915-99b1-4094-b067-aae90723e822/ HTTP/1.1" 200 3319
 INFO 2019-02-20 17:44:21,117 basehttp 124 "GET /verifications/smscodes/13111111111/?text=xyjq&image_code_id=641bd915-99b1-4094-b067-aae90723e822 HTTP/1.1" 200 12
+INFO 2019-02-21 16:08:52,801 basehttp 124 "GET /verifications/imagecodes/0ae58fd7-3408-4b3c-ac66-ba77779de27a/ HTTP/1.1" 200 2978
+INFO 2019-02-21 16:08:54,446 basehttp 124 "GET /verifications/imagecodes/13674985-9b58-4a26-8417-661f381b5f2e/ HTTP/1.1" 200 3247
+INFO 2019-02-21 16:09:07,790 basehttp 124 "GET /verifications/smscodes/13111111111/?text=fsds&image_code_id=13674985-9b58-4a26-8417-661f381b5f2e HTTP/1.1" 200 12
+INFO 2019-02-21 16:09:33,823 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:09:33,841 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:09:36,635 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:09:36,654 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:10:10,905 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:10:10,943 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+WARNING 2019-02-21 16:11:50,922 basehttp 124 "GET /users/ HTTP/1.1" 405 9890
+INFO 2019-02-21 16:11:50,971 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-21 16:11:50,973 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-21 16:11:50,978 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2019-02-21 16:11:50,987 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-21 16:11:51,006 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-21 16:11:51,011 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-21 16:11:51,028 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-21 16:11:51,041 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2019-02-21 16:11:51,050 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-21 16:11:51,055 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2019-02-21 16:11:51,085 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-21 16:11:51,562 base 152 Not Found: /favicon.ico
+WARNING 2019-02-21 16:11:51,575 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2182
+INFO 2019-02-21 16:11:54,839 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 9783
+INFO 2019-02-21 16:44:09,771 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:45:03,319 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:45:27,304 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:45:50,217 basehttp 124 "GET /verifications/imagecodes/edff3e7b-efc8-42dd-b052-e3a68ed000f4/ HTTP/1.1" 200 3119
+INFO 2019-02-21 16:46:45,310 basehttp 124 "GET /verifications/imagecodes/aa94e1bf-15b3-499f-ad36-f8ed309d13c9/ HTTP/1.1" 200 3101
+INFO 2019-02-21 16:47:25,937 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-21 16:47:26,003 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 16:47:34,284 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 16:47:54,440 basehttp 124 "GET /verifications/imagecodes/8d093f95-c5b3-48f6-8c42-82fa0d35fda4/ HTTP/1.1" 200 3334
+INFO 2019-02-21 16:48:02,506 basehttp 124 "GET /verifications/imagecodes/47f06f87-34cb-4a0d-bc92-ea147b3a2ec8/ HTTP/1.1" 200 2799
+INFO 2019-02-21 16:48:08,134 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:48:22,520 basehttp 124 "GET /verifications/smscodes/13111111111/?text=9omk&image_code_id=47f06f87-34cb-4a0d-bc92-ea147b3a2ec8 HTTP/1.1" 200 12
+INFO 2019-02-21 16:48:38,004 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+ERROR 2019-02-21 16:48:41,695 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 49, in post
+    serializer.save()
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the RegiserUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+ERROR 2019-02-21 16:48:41,814 basehttp 124 "POST /users/ HTTP/1.1" 500 22254
+INFO 2019-02-21 17:07:22,136 basehttp 124 "GET /verifications/imagecodes/c4eb89f3-21d9-4a02-830a-0912046e3049/ HTTP/1.1" 200 2980
+INFO 2019-02-21 17:58:57,338 basehttp 124 "GET /verifications/imagecodes/0949306f-c980-4b0c-92ae-90232ddd6ec4/ HTTP/1.1" 200 3426
+INFO 2019-02-21 17:59:01,724 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 17:59:13,080 basehttp 124 "GET /verifications/smscodes/13111111111/?text=zpqg&image_code_id=0949306f-c980-4b0c-92ae-90232ddd6ec4 HTTP/1.1" 200 12
+INFO 2019-02-21 18:00:34,548 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-21 18:00:34,653 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:00:48,327 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2019-02-21 18:01:04,967 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:01:07,279 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:01:34,617 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:01:40,239 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:02:17,305 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:02:22,288 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:02:59,458 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:05,381 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:03:18,530 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:21,926 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:03:35,414 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:53,540 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:07:04,482 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:10,977 basehttp 124 "GET /verifications/imagecodes/28a65a54-d32c-4b7c-84c8-3de5b0d6c6d3/ HTTP/1.1" 200 2826
+INFO 2019-02-21 18:07:14,914 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:23,183 basehttp 124 "GET /verifications/imagecodes/c1fef7ff-4d0a-4cfa-b136-e79fdced83f1/ HTTP/1.1" 200 3228
+INFO 2019-02-21 18:07:27,747 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:37,103 basehttp 124 "GET /verifications/smscodes/13111111111/?text=j8ug&image_code_id=c1fef7ff-4d0a-4cfa-b136-e79fdced83f1 HTTP/1.1" 200 12
+INFO 2019-02-21 18:07:50,681 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:52,084 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:09:24,090 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:09:24,134 basehttp 124 "POST /users/ HTTP/1.1" 200 66
