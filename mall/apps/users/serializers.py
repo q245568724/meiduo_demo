@@ -13,13 +13,33 @@ class RegiserUserSerializer(serializers.ModelSerializer):
     如果没有 则查看当前类是否有定义
     """
     password2 = serializers.CharField(label='校验密码', allow_null=False, allow_blank=False, write_only=True)
-    sms_code = serializers.CharField(label='短信验证码', max_length=6, min_length=6, allow_null=False, allow_blank=False,write_only=True)
+    sms_code = serializers.CharField(label='短信验证码',write_only=True, max_length=6, min_length=6, allow_null=False, allow_blank=False)
     allow = serializers.CharField(label='是否同意协议', allow_null=False, allow_blank=False, write_only=True)
 
     class Meta:
         model = User
-        fields = ['mobile','username','password','sms_code','allow','password2']
+        fields = ['id','mobile','username','password','sms_code','allow','password2']
 
+        extra_kwargs = {
+            'id': {'read_only': True},
+            'username': {
+                'min_length': 5,
+                'max_length': 20,
+                'error_messages': {
+                    'min_length': '仅允许5-20个字符的用户名',
+                    'max_length': '仅允许5-20个字符的用户名',
+                }
+            },
+            'password': {
+                'write_only': True,
+                'min_length': 8,
+                'max_length': 20,
+                'error_messages': {
+                    'min_length': '仅允许8-20个字符的密码',
+                    'max_length': '仅允许8-20个字符的密码',
+                }
+            }
+        }
     """
     校验数据
     1 字段类型
@@ -82,7 +102,7 @@ class RegiserUserSerializer(serializers.ModelSerializer):
         # user = User.objects.create(**validated_data)
         # 2  现在的数据满足要求了 可以让父类执行
         user = super().create(validated_data)
-        # 3 密码还是铭文
+        # 3 密码还是明文
         # 我们需要加密
         user.set_password(validated_data['password'])
         user.save()

@@ -48,4 +48,7 @@ class RegiserUserAPIView(APIView):
         # 3 数据入库
         serializer.save()
         # 4 返回响应
+        # 序列化: 将模型转换为JSON
+        # 如何序列化的呢? 我们的序列化器是根据字段来查询模型中的对应字典,如果序列化中有,模型没有,则会报错
+        # 如果字段设置为write_only 则会在序列化中忽略此字段
         return Response(serializer.data)
