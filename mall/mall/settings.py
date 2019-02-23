@@ -212,8 +212,21 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     # 异常处理
-    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',}
+    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
+    # 认证方式
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',   # 优先采用jwt
+        'rest_framework.authentication.SessionAuthentication',   # 如果没有jwt则采用sessison
+        'rest_framework.authentication.BasicAuthentication',   # 主要在测试里用
+    ),}
 
 # 替换系统的User需要通过设置AUTH_USER_MODEL来实现
 # 子应用名.模型类名  只能有一个点
 AUTH_USER_MODEL = 'users.User'
+
+# 设置JWT
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+    # 'rest_framework_jwt.utils.jwt_response_payload_handler',
+    'utils.users.jwt_response_payload_handler'
+}

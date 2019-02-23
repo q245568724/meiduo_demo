@@ -491,3 +491,12 @@ INFO 2019-02-21 19:11:55,970 basehttp 124 "GET /verifications/imagecodes/4bde7a8
 INFO 2019-02-21 19:11:59,193 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
 INFO 2019-02-21 19:22:23,728 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
 INFO 2019-02-21 20:07:24,704 basehttp 124 "GET /verifications/imagecodes/87b63d3e-3516-4751-8f46-6d2416a57e0a/ HTTP/1.1" 200 3573
+WARNING 2019-02-23 09:56:49,844 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+WARNING 2019-02-23 09:58:41,639 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+INFO 2019-02-23 10:00:02,489 basehttp 124 "GET /verifications/imagecodes/201dc1e7-5348-4016-b5b2-e2212e38544f/ HTTP/1.1" 200 3247
+INFO 2019-02-23 10:00:06,023 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-23 10:00:18,087 basehttp 124 "GET /verifications/smscodes/13111111111/?text=3mva&image_code_id=201dc1e7-5348-4016-b5b2-e2212e38544f HTTP/1.1" 200 12
+INFO 2019-02-23 10:00:32,237 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-23 10:00:32,258 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-23 10:00:32,402 basehttp 124 "POST /users/ HTTP/1.1" 200 51
+INFO 2019-02-23 10:01:03,096 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 175
