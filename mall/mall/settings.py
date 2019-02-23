@@ -231,11 +231,11 @@ import datetime
 # 设置JWT
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
-    # 'rest_framework_jwt.utils.jwt_response_payload_handler',
-
     'utils.users.jwt_response_payload_handler',
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
-
-    # 'utils.users.jwt_response_payload_handler'
-
 }
+
+# 修改默认认证后端
+AUTHENTICATION_BACKENDS = [
+    'utils.users.UsernameMobleModelBackend',
+]

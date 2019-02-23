@@ -561,3 +561,8 @@ INFO 2019-02-23 19:29:41,998 basehttp 124 "GET /users/usernames/22222/count/ HTT
 INFO 2019-02-23 19:29:56,712 basehttp 124 "GET /verifications/smscodes/13122222222/?text=uqpl&image_code_id=84b39aa2-8eaf-47fe-a1cf-5d904dd87828 HTTP/1.1" 200 12
 INFO 2019-02-23 19:30:14,067 basehttp 124 "GET /users/usernames/22222/count/ HTTP/1.1" 200 30
 INFO 2019-02-23 19:30:14,146 basehttp 124 "POST /users/ HTTP/1.1" 200 222
+INFO 2019-02-23 21:38:23,873 basehttp 124 "OPTIONS /users/auths/ HTTP/1.1" 200 0
+WARNING 2019-02-23 21:38:24,010 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+WARNING 2019-02-23 21:38:32,239 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+INFO 2019-02-23 21:38:44,695 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
+INFO 2019-02-23 21:40:09,376 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207

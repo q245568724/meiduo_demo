@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^$', views.RegiserUserAPIView.as_view()),
     # 实现登陆
     url(r'^auths/',obtain_jwt_token),
+    # jwt把用户名和密码给系统,让系统进行认证,认证成功之后jwt生成token
 ]
