@@ -500,6 +500,9 @@ INFO 2019-02-23 10:00:32,237 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
 INFO 2019-02-23 10:00:32,258 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
 INFO 2019-02-23 10:00:32,402 basehttp 124 "POST /users/ HTTP/1.1" 200 51
 INFO 2019-02-23 10:01:03,096 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 175
+<<<<<<< HEAD
 INFO 2019-02-23 16:31:42,203 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
 INFO 2019-02-23 17:12:19,125 basehttp 124 "OPTIONS /users/auths/ HTTP/1.1" 200 0
 INFO 2019-02-23 17:12:19,267 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
+=======
+>>>>>>> af96507a6391773a6cc5e9340fd2bb4ab5de01ed
