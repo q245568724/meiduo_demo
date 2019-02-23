@@ -506,3 +506,58 @@ INFO 2019-02-23 17:12:19,125 basehttp 124 "OPTIONS /users/auths/ HTTP/1.1" 200 0
 INFO 2019-02-23 17:12:19,267 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
 =======
 >>>>>>> af96507a6391773a6cc5e9340fd2bb4ab5de01ed
+INFO 2019-02-23 19:22:18,648 basehttp 124 "GET /verifications/imagecodes/6d0391f5-aeb9-4e2e-8527-33ab7061f284/ HTTP/1.1" 200 3316
+INFO 2019-02-23 19:22:23,430 basehttp 124 "GET /verifications/smscodes/13111111111/?text=klsb&image_code_id=6d0391f5-aeb9-4e2e-8527-33ab7061f284 HTTP/1.1" 200 12
+INFO 2019-02-23 19:22:36,923 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-23 19:22:36,948 basehttp 124 "GET /users/usernames/11111/count/ HTTP/1.1" 200 30
+ERROR 2019-02-23 19:22:36,951 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 47, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 1121, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'token' was declared on serializer RegiserUserSerializer, but has not been included in the 'fields' option.
+ERROR 2019-02-23 19:22:37,041 basehttp 124 "POST /users/ HTTP/1.1" 500 19492
+INFO 2019-02-23 19:22:59,397 basehttp 124 "GET /users/usernames/11111/count/ HTTP/1.1" 200 30
+WARNING 2019-02-23 19:22:59,408 basehttp 124 "POST /users/ HTTP/1.1" 400 55
+INFO 2019-02-23 19:23:09,185 basehttp 124 "GET /users/usernames/11111/count/ HTTP/1.1" 200 30
+WARNING 2019-02-23 19:23:09,261 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-23 19:23:17,514 basehttp 124 "GET /verifications/imagecodes/cf7066e9-82cf-403f-b4c6-65b1d37d4e76/ HTTP/1.1" 200 3114
+INFO 2019-02-23 19:23:24,618 basehttp 124 "GET /verifications/smscodes/13222222222/?text=qhxj&image_code_id=cf7066e9-82cf-403f-b4c6-65b1d37d4e76 HTTP/1.1" 200 12
+INFO 2019-02-23 19:23:39,271 basehttp 124 "GET /users/usernames/11111/count/ HTTP/1.1" 200 30
+INFO 2019-02-23 19:23:39,393 basehttp 124 "POST /users/ HTTP/1.1" 200 222
+INFO 2019-02-23 19:29:37,068 basehttp 124 "GET /verifications/imagecodes/84b39aa2-8eaf-47fe-a1cf-5d904dd87828/ HTTP/1.1" 200 2953
+INFO 2019-02-23 19:29:41,998 basehttp 124 "GET /users/usernames/22222/count/ HTTP/1.1" 200 30
+INFO 2019-02-23 19:29:56,712 basehttp 124 "GET /verifications/smscodes/13122222222/?text=uqpl&image_code_id=84b39aa2-8eaf-47fe-a1cf-5d904dd87828 HTTP/1.1" 200 12
+INFO 2019-02-23 19:30:14,067 basehttp 124 "GET /users/usernames/22222/count/ HTTP/1.1" 200 30
+INFO 2019-02-23 19:30:14,146 basehttp 124 "POST /users/ HTTP/1.1" 200 222

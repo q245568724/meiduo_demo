@@ -52,3 +52,15 @@ class RegiserUserAPIView(APIView):
         # 如何序列化的呢? 我们的序列化器是根据字段来查询模型中的对应字典,如果序列化中有,模型没有,则会报错
         # 如果字段设置为write_only 则会在序列化中忽略此字段
         return Response(serializer.data)
+
+
+"""
+当用户注册成功之后,自动登陆
+
+自动登陆的功能 是要求 用户注册成功之后 返回数据的时候
+需要额外添加一个 token
+
+1 序列化的时候 添加token
+2 token 怎么生成
+
+"""

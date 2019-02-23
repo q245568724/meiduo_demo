@@ -16,9 +16,11 @@ class RegiserUserSerializer(serializers.ModelSerializer):
     sms_code = serializers.CharField(label='短信验证码',write_only=True, max_length=6, min_length=6, allow_null=False, allow_blank=False)
     allow = serializers.CharField(label='是否同意协议', allow_null=False, allow_blank=False, write_only=True)
 
+    token = serializers.CharField(label='token',read_only=True)
+
     class Meta:
         model = User
-        fields = ['id','mobile','username','password','sms_code','allow','password2']
+        fields = ['id','mobile','username','password','sms_code','allow','password2','token']
 
         extra_kwargs = {
             'id': {'read_only': True},
@@ -38,7 +40,7 @@ class RegiserUserSerializer(serializers.ModelSerializer):
                     'min_length': '仅允许8-20个字符的密码',
                     'max_length': '仅允许8-20个字符的密码',
                 }
-            }
+            },
         }
     """
     校验数据
@@ -107,4 +109,23 @@ class RegiserUserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
 
+        # 用户入库之后 我们生成token
+        from rest_framework_jwt.settings import api_settings
+        # 4.1 需要使用jwt的两个方法
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
+        # 4.2 让payload(载荷)盛放一些用户信息
+        payload = jwt_payload_handler(user)
+        token = jwt_encode_handler(payload)
+
+        user.token=token
+
         return user
+
+# class Person(object):
+#     name='itcast'
+#
+# p = Person()
+# p.name
+
