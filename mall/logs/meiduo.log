@@ -1,0 +1,505 @@
+WARNING 2019-02-19 11:44:37,571 base 152 Not Found: /users/username/count
+WARNING 2019-02-19 11:44:37,575 basehttp 124 "POST /users/username/count HTTP/1.1" 404 2195
+WARNING 2019-02-19 11:44:43,841 base 152 Not Found: /users/username/count
+WARNING 2019-02-19 11:44:43,846 basehttp 124 "GET /users/username/count HTTP/1.1" 404 2194
+WARNING 2019-02-19 11:45:13,060 base 152 Not Found: /users/username/ddd/count
+WARNING 2019-02-19 11:45:13,070 basehttp 124 "GET /users/username/ddd/count HTTP/1.1" 404 2206
+WARNING 2019-02-19 11:45:26,936 base 152 Not Found: /users/usernames/ddd/count
+WARNING 2019-02-19 11:45:26,939 basehttp 124 "GET /users/usernames/ddd/count HTTP/1.1" 404 2209
+WARNING 2019-02-19 11:45:33,025 base 152 Not Found: /users/usernames/ddd/count/
+WARNING 2019-02-19 11:45:33,029 basehttp 124 "GET /users/usernames/ddd/count/ HTTP/1.1" 404 2212
+WARNING 2019-02-19 11:47:00,250 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:00,256 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:01,349 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:01,356 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:02,497 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:02,504 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+WARNING 2019-02-19 11:47:27,219 base 152 Not Found: /users/usernames/ddddd/count/
+WARNING 2019-02-19 11:47:27,227 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 404 2218
+ERROR 2019-02-19 11:48:22,646 exception 135 Internal Server Error: /users/users/usernames/ddddd/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 22, in get
+    count = User.objects.filters(username=username).count()
+AttributeError: 'UserManager' object has no attribute 'filters'
+ERROR 2019-02-19 11:48:22,723 basehttp 124 "GET /users/users/usernames/ddddd/count/ HTTP/1.1" 500 16990
+ERROR 2019-02-19 11:48:36,620 exception 135 Internal Server Error: /users/usernames/ddddd/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 22, in get
+    count = User.objects.filters(username=username).count()
+AttributeError: 'UserManager' object has no attribute 'filters'
+ERROR 2019-02-19 11:48:36,651 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 500 16966
+INFO 2019-02-19 11:52:17,878 basehttp 124 "GET /users/usernames/ddddd/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 12:07:17,939 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 13:09:57,318 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:09:57,322 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 25, in get
+    text,image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-02-19 13:09:57,357 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17269
+INFO 2019-02-19 13:13:18,570 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:13:18,585 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 27, in get
+    text,image = Captcha.generate_captcha()
+TypeError: generate_captcha() missing 1 required positional argument: 'self'
+ERROR 2019-02-19 13:13:18,612 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17259
+INFO 2019-02-19 13:13:57,546 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:13:57,560 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 27, in get
+    text,image = Captcha.generate_captcha(image_code_id)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/libs/captcha/captcha.py", line 214, in generate_captcha
+    self.initialize()
+AttributeError: 'str' object has no attribute 'initialize'
+ERROR 2019-02-19 13:13:57,593 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17371
+INFO 2019-02-19 13:16:04,100 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+ERROR 2019-02-19 13:16:04,118 exception 135 Internal Server Error: /verifications/imagecodes/12345/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/verifications/views.py", line 26, in get
+    text,image = captcha.generate_captcha(image_code_id)
+TypeError: generate_captcha() takes 1 positional argument but 2 were given
+ERROR 2019-02-19 13:16:04,145 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 500 17268
+INFO 2019-02-19 13:16:27,027 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+INFO 2019-02-19 13:16:27,064 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3068
+<<<<<<< HEAD
+INFO 2019-02-19 14:21:46,031 basehttp 124 "GET /verifications/imagecodes/a46ce7bb-bbe6-48e7-8699-556c6e23f493/ HTTP/1.1" 200 3381
+INFO 2019-02-19 14:23:19,181 basehttp 124 "GET /verifications/imagecodes/b3467156-5e23-4c8a-8c8a-1ef2b9da907a/ HTTP/1.1" 200 3332
+INFO 2019-02-19 14:23:42,626 basehttp 124 "GET /users/usernames/dsfas/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 14:23:47,672 basehttp 124 "GET /users/usernames/dsfasd/count/ HTTP/1.1" 200 11
+INFO 2019-02-19 14:24:38,975 basehttp 124 "GET /verifications/imagecodes/53cc39cd-2dd1-4c1d-8ccd-84dfd2a28e04/ HTTP/1.1" 200 3480
+INFO 2019-02-19 14:24:39,689 basehttp 124 "GET /verifications/imagecodes/a9f36883-0f86-4df5-b3b9-719d846fac71/ HTTP/1.1" 200 3086
+INFO 2019-02-19 14:24:40,638 basehttp 124 "GET /verifications/imagecodes/fb1126ac-61b7-4c4b-8edb-45c989cab254/ HTTP/1.1" 200 3484
+INFO 2019-02-19 14:24:41,963 basehttp 124 "GET /verifications/imagecodes/fb8798a5-4c19-464f-86f6-5e2452b99a45/ HTTP/1.1" 200 3193
+INFO 2019-02-19 14:24:42,542 basehttp 124 "GET /verifications/imagecodes/454b41b6-e60e-4a45-aa78-59a4c0e1bc3b/ HTTP/1.1" 200 3123
+INFO 2019-02-19 14:24:43,073 basehttp 124 "GET /verifications/imagecodes/67c1f6e8-ad85-4c20-b269-8b4811e414e0/ HTTP/1.1" 200 3589
+INFO 2019-02-19 14:46:25,088 basehttp 124 "GET /verifications/imagecodes/de5aadbf-8a0e-49d0-baaf-65b0f96a41f1/ HTTP/1.1" 200 3013
+INFO 2019-02-19 14:46:27,220 basehttp 124 "GET /verifications/imagecodes/5e78732d-2f65-4c44-a3aa-427e642f795f/ HTTP/1.1" 200 3432
+INFO 2019-02-19 14:46:28,029 basehttp 124 "GET /verifications/imagecodes/e03df854-be10-4e81-99a5-442880efd5dc/ HTTP/1.1" 200 3520
+=======
+>>>>>>> 6c434f3d206b553fa9330fae690f47af94fe278e
+INFO 2019-02-20 15:42:30,758 basehttp 124 "GET /verifications/imagecodes/12345 HTTP/1.1" 301 0
+INFO 2019-02-20 15:42:30,828 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3008
+WARNING 2019-02-20 15:42:30,960 base 152 Not Found: /favicon.ico
+WARNING 2019-02-20 15:42:30,971 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2182
+INFO 2019-02-20 15:42:34,414 basehttp 124 "GET /verifications/imagecodes/12345/ HTTP/1.1" 200 3614
+INFO 2019-02-20 15:45:48,956 basehttp 124 "GET /verifications/imagecodes/34252/ HTTP/1.1" 200 3145
+INFO 2019-02-20 15:46:22,511 basehttp 124 "GET /verifications/imagecodes/34251/ HTTP/1.1" 200 3574
+INFO 2019-02-20 15:49:16,911 basehttp 124 "GET /verifications/imagecodes/ed7c7030-0c4b-415a-a4b0-a76da679171b/ HTTP/1.1" 200 3248
+INFO 2019-02-20 15:49:22,691 basehttp 124 "GET /verifications/imagecodes/5fa24226-605f-4a61-ad7f-c1821e6b8094/ HTTP/1.1" 200 3027
+ERROR 2019-02-20 15:51:28,531 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:51:28,730 basehttp 124 "GET /verifications/smscodes/13111111111/?text=krwt&image_code_id=5fa24226-605f-4a61-ad7f-c1821e6b8094 HTTP/1.1" 500 88812
+INFO 2019-02-20 15:52:37,747 basehttp 124 "GET /verifications/imagecodes/ba026cd8-bc35-4129-af1e-2016c7d2f01a/ HTTP/1.1" 200 3622
+ERROR 2019-02-20 15:53:23,859 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:53:24,048 basehttp 124 "GET /verifications/smscodes/13111111111/?text=lnmk&image_code_id=ba026cd8-bc35-4129-af1e-2016c7d2f01a HTTP/1.1" 500 88812
+ERROR 2019-02-20 15:54:18,657 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 15:54:18,856 basehttp 124 "GET /verifications/smscodes/13111111111/?text=lnmk&image_code_id=ba026cd8-bc35-4129-af1e-2016c7d2f01a HTTP/1.1" 500 88812
+INFO 2019-02-20 16:00:02,894 basehttp 124 "GET /verifications/imagecodes/7decab95-22b5-4887-9a79-b16120cfc680/ HTTP/1.1" 200 3314
+ERROR 2019-02-20 16:01:01,211 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:01:01,410 basehttp 124 "GET /verifications/smscodes/13111111111/?text=k6ih&image_code_id=7decab95-22b5-4887-9a79-b16120cfc680 HTTP/1.1" 500 88812
+INFO 2019-02-20 16:03:45,816 basehttp 124 "GET /verifications/imagecodes/2b196af9-c6bf-4823-94fa-872bdae408ff/ HTTP/1.1" 200 2892
+ERROR 2019-02-20 16:04:24,751 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:04:24,934 basehttp 124 "GET /verifications/smscodes/13111111111/?text=7ijl&image_code_id=2b196af9-c6bf-4823-94fa-872bdae408ff HTTP/1.1" 500 88812
+INFO 2019-02-20 16:07:48,558 basehttp 124 "GET /verifications/imagecodes/52cfa8f8-bfc5-4057-9c4c-49563c338b32/ HTTP/1.1" 200 3383
+ERROR 2019-02-20 16:08:27,687 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:08:27,982 basehttp 124 "GET /verifications/smscodes/13111111111/?text=aewx&image_code_id=52cfa8f8-bfc5-4057-9c4c-49563c338b32 HTTP/1.1" 500 88812
+INFO 2019-02-20 16:44:36,346 basehttp 124 "GET /verifications/imagecodes/ffaa49b9-5f14-4727-9d8c-9d13e580685b/ HTTP/1.1" 200 2852
+INFO 2019-02-20 16:45:25,377 basehttp 124 "GET /verifications/smscodes/13111111111/?text=opeb&image_code_id=ffaa49b9-5f14-4727-9d8c-9d13e580685b HTTP/1.1" 200 12
+INFO 2019-02-20 16:46:03,514 basehttp 124 "GET /verifications/smscodes/13111111111/?text=opeb&image_code_id=ffaa49b9-5f14-4727-9d8c-9d13e580685b HTTP/1.1" 200 12
+INFO 2019-02-20 16:47:04,868 basehttp 124 "GET /verifications/imagecodes/9ba162cc-0383-4c27-ae37-be77445d7647/ HTTP/1.1" 200 3140
+INFO 2019-02-20 16:48:42,694 basehttp 124 "GET /verifications/smscodes/13111111111/?text=ddyv&image_code_id=9ba162cc-0383-4c27-ae37-be77445d7647 HTTP/1.1" 200 12
+INFO 2019-02-20 16:57:08,252 basehttp 124 "GET /verifications/imagecodes/145ee2d1-5d11-4bc6-b537-bbd107770042/ HTTP/1.1" 200 2786
+ERROR 2019-02-20 16:57:50,308 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:57:50,474 basehttp 124 "GET /verifications/smscodes/13111111111/?text=st5y&image_code_id=145ee2d1-5d11-4bc6-b537-bbd107770042 HTTP/1.1" 500 88812
+ERROR 2019-02-20 16:58:21,414 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 16:58:21,624 basehttp 124 "GET /verifications/smscodes/13111111111/?text=st5y&image_code_id=145ee2d1-5d11-4bc6-b537-bbd107770042 HTTP/1.1" 500 88812
+INFO 2019-02-20 17:08:21,156 basehttp 124 "GET /verifications/imagecodes/7a23a1da-dab5-40ba-a861-299da595845c/ HTTP/1.1" 200 3453
+INFO 2019-02-20 17:11:56,697 basehttp 124 "GET /verifications/imagecodes/d50a9bc5-6fe0-40d5-811c-1b6bdb5e63f9/ HTTP/1.1" 200 3330
+INFO 2019-02-20 17:15:34,307 basehttp 124 "GET /verifications/imagecodes/20f9e10a-38f5-4b83-b1e9-de27a5fee6b6/ HTTP/1.1" 200 3283
+ERROR 2019-02-20 17:16:12,985 exception 135 Internal Server Error: /verifications/smscodes/13111111111/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-20 17:16:13,165 basehttp 124 "GET /verifications/smscodes/13111111111/?text=shah&image_code_id=d50a9bc5-6fe0-40d5-811c-1b6bdb5e63f9 HTTP/1.1" 500 88812
+INFO 2019-02-20 17:38:02,232 basehttp 124 "GET /verifications/imagecodes/ce0e4f45-d7a8-4e54-b52d-b0e78919e146/ HTTP/1.1" 200 2902
+INFO 2019-02-20 17:38:28,278 basehttp 124 "GET /verifications/imagecodes/0cc963ae-ade1-470e-8852-d7430845b770/ HTTP/1.1" 200 2680
+INFO 2019-02-20 17:40:52,191 basehttp 124 "GET /verifications/imagecodes/f441be05-4353-40f4-ab43-4729b5b054d6/ HTTP/1.1" 200 3296
+INFO 2019-02-20 17:43:39,269 basehttp 124 "GET /verifications/imagecodes/858c41db-c855-4a79-aae6-bfa59513b397/ HTTP/1.1" 200 3212
+INFO 2019-02-20 17:44:03,887 basehttp 124 "GET /verifications/imagecodes/3572848f-cbe4-425e-8009-192d885a8c74/ HTTP/1.1" 200 2974
+INFO 2019-02-20 17:44:12,021 basehttp 124 "GET /verifications/imagecodes/ebd5f79f-16d0-4d85-8c50-8aa47da441d6/ HTTP/1.1" 200 3457
+INFO 2019-02-20 17:44:15,448 basehttp 124 "GET /verifications/imagecodes/641bd915-99b1-4094-b067-aae90723e822/ HTTP/1.1" 200 3319
+INFO 2019-02-20 17:44:21,117 basehttp 124 "GET /verifications/smscodes/13111111111/?text=xyjq&image_code_id=641bd915-99b1-4094-b067-aae90723e822 HTTP/1.1" 200 12
+INFO 2019-02-21 16:08:52,801 basehttp 124 "GET /verifications/imagecodes/0ae58fd7-3408-4b3c-ac66-ba77779de27a/ HTTP/1.1" 200 2978
+INFO 2019-02-21 16:08:54,446 basehttp 124 "GET /verifications/imagecodes/13674985-9b58-4a26-8417-661f381b5f2e/ HTTP/1.1" 200 3247
+INFO 2019-02-21 16:09:07,790 basehttp 124 "GET /verifications/smscodes/13111111111/?text=fsds&image_code_id=13674985-9b58-4a26-8417-661f381b5f2e HTTP/1.1" 200 12
+INFO 2019-02-21 16:09:33,823 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:09:33,841 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:09:36,635 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:09:36,654 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:10:10,905 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 175
+INFO 2019-02-21 16:10:10,943 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+WARNING 2019-02-21 16:11:50,922 basehttp 124 "GET /users/ HTTP/1.1" 405 9890
+INFO 2019-02-21 16:11:50,971 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-21 16:11:50,973 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-21 16:11:50,978 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2019-02-21 16:11:50,987 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-21 16:11:51,006 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-21 16:11:51,011 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-21 16:11:51,028 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-21 16:11:51,041 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2019-02-21 16:11:51,050 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-21 16:11:51,055 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2019-02-21 16:11:51,085 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-21 16:11:51,562 base 152 Not Found: /favicon.ico
+WARNING 2019-02-21 16:11:51,575 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2182
+INFO 2019-02-21 16:11:54,839 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 9783
+INFO 2019-02-21 16:44:09,771 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 11
+INFO 2019-02-21 16:45:03,319 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:45:27,304 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:45:50,217 basehttp 124 "GET /verifications/imagecodes/edff3e7b-efc8-42dd-b052-e3a68ed000f4/ HTTP/1.1" 200 3119
+INFO 2019-02-21 16:46:45,310 basehttp 124 "GET /verifications/imagecodes/aa94e1bf-15b3-499f-ad36-f8ed309d13c9/ HTTP/1.1" 200 3101
+INFO 2019-02-21 16:47:25,937 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-21 16:47:26,003 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 16:47:34,284 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 16:47:54,440 basehttp 124 "GET /verifications/imagecodes/8d093f95-c5b3-48f6-8c42-82fa0d35fda4/ HTTP/1.1" 200 3334
+INFO 2019-02-21 16:48:02,506 basehttp 124 "GET /verifications/imagecodes/47f06f87-34cb-4a0d-bc92-ea147b3a2ec8/ HTTP/1.1" 200 2799
+INFO 2019-02-21 16:48:08,134 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 16:48:22,520 basehttp 124 "GET /verifications/smscodes/13111111111/?text=9omk&image_code_id=47f06f87-34cb-4a0d-bc92-ea147b3a2ec8 HTTP/1.1" 200 12
+INFO 2019-02-21 16:48:38,004 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+ERROR 2019-02-21 16:48:41,695 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/users/views.py", line 49, in post
+    serializer.save()
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the RegiserUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+ERROR 2019-02-21 16:48:41,814 basehttp 124 "POST /users/ HTTP/1.1" 500 22254
+INFO 2019-02-21 17:07:22,136 basehttp 124 "GET /verifications/imagecodes/c4eb89f3-21d9-4a02-830a-0912046e3049/ HTTP/1.1" 200 2980
+INFO 2019-02-21 17:58:57,338 basehttp 124 "GET /verifications/imagecodes/0949306f-c980-4b0c-92ae-90232ddd6ec4/ HTTP/1.1" 200 3426
+INFO 2019-02-21 17:59:01,724 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 17:59:13,080 basehttp 124 "GET /verifications/smscodes/13111111111/?text=zpqg&image_code_id=0949306f-c980-4b0c-92ae-90232ddd6ec4 HTTP/1.1" 200 12
+INFO 2019-02-21 18:00:34,548 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-21 18:00:34,653 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:00:48,327 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2019-02-21 18:01:04,967 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:01:07,279 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:01:34,617 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:01:40,239 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:02:17,305 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:02:22,288 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:02:59,458 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:05,381 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:03:18,530 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:21,926 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:03:35,414 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:03:53,540 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:07:04,482 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:10,977 basehttp 124 "GET /verifications/imagecodes/28a65a54-d32c-4b7c-84c8-3de5b0d6c6d3/ HTTP/1.1" 200 2826
+INFO 2019-02-21 18:07:14,914 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:23,183 basehttp 124 "GET /verifications/imagecodes/c1fef7ff-4d0a-4cfa-b136-e79fdced83f1/ HTTP/1.1" 200 3228
+INFO 2019-02-21 18:07:27,747 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:37,103 basehttp 124 "GET /verifications/smscodes/13111111111/?text=j8ug&image_code_id=c1fef7ff-4d0a-4cfa-b136-e79fdced83f1 HTTP/1.1" 200 12
+INFO 2019-02-21 18:07:50,681 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 18:07:52,084 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+WARNING 2019-02-21 18:09:24,090 basehttp 124 "POST /users/ HTTP/1.1" 400 49
+INFO 2019-02-21 18:09:24,134 basehttp 124 "POST /users/ HTTP/1.1" 200 66
+INFO 2019-02-21 19:11:55,970 basehttp 124 "GET /verifications/imagecodes/4bde7a8f-af68-4993-b5a9-d7631e604b82/ HTTP/1.1" 200 3496
+INFO 2019-02-21 19:11:59,193 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 19:22:23,728 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-21 20:07:24,704 basehttp 124 "GET /verifications/imagecodes/87b63d3e-3516-4751-8f46-6d2416a57e0a/ HTTP/1.1" 200 3573
+WARNING 2019-02-23 09:56:49,844 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+WARNING 2019-02-23 09:58:41,639 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 67
+INFO 2019-02-23 10:00:02,489 basehttp 124 "GET /verifications/imagecodes/201dc1e7-5348-4016-b5b2-e2212e38544f/ HTTP/1.1" 200 3247
+INFO 2019-02-23 10:00:06,023 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-23 10:00:18,087 basehttp 124 "GET /verifications/smscodes/13111111111/?text=3mva&image_code_id=201dc1e7-5348-4016-b5b2-e2212e38544f HTTP/1.1" 200 12
+INFO 2019-02-23 10:00:32,237 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-23 10:00:32,258 basehttp 124 "GET /users/usernames/itcast/count/ HTTP/1.1" 200 31
+INFO 2019-02-23 10:00:32,402 basehttp 124 "POST /users/ HTTP/1.1" 200 51
+INFO 2019-02-23 10:01:03,096 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 175
+INFO 2019-02-23 16:31:42,203 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
+INFO 2019-02-23 17:12:19,125 basehttp 124 "OPTIONS /users/auths/ HTTP/1.1" 200 0
+INFO 2019-02-23 17:12:19,267 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
