@@ -8,7 +8,7 @@ from mall import settings
 from rest_framework import status
 
 from oauth.models import OAuthQQUser
-from oauth.utils import oauth_token
+from oauth.utils import oauth_token, generate_token, generic_open_id
 
 """
 当用户点击qq按钮的时候,会发送一个请求,
@@ -72,19 +72,14 @@ class OAuthQQUserAPIView(APIView):
             qquser = OAuthQQUser.objects.get(openid=openid)
         except OAuthQQUser.DoesNotExist:
             # 不存在
+            # 返回openid让用户在前端进行绑定
             # openid 很重要,所以我们需要对openid进行加密
             # 绑定也应该有一个时效
-            return Response({'access_token':openid})
+            token = generic_open_id(openid)
+            return Response({'access_token':token})
         else:
-            # 存在,应该让用户登陆
-            # from rest_framework_jwt.settings import api_settings
-            # # 4.1 需要使用jwt的两个方法
-            # jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-            # jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-            # # 4.2 让payload(载荷)盛放一些用户信息
-            # payload = jwt_payload_handler(qquser.user)
-            # token = jwt_encode_handler(payload)
-            token = oauth_token(qquser.user)
+            # 生成token
+            token = generate_token(qquser.user)
             return Response({
                 'token':token,
                 'username':qquser.user.username,
@@ -93,18 +88,3 @@ class OAuthQQUserAPIView(APIView):
 
 
 
-
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-from mall import settings
-
-# 1 创建一个序列化器
-s = Serializer(secret_key=settings.SECRET_KEY,expires_in=3600)
-# 2 组织数据
-data = {
-    'openid':'1234567890'
-}
-# 3 让序列化器对数据进行处理
-token = s.dumps(data)
-
-# 4 获取数据对数据进行解密
-s.load(token)

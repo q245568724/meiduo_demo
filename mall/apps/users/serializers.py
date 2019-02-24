@@ -1,6 +1,8 @@
 import re
 from rest_framework import serializers
 from django_redis import get_redis_connection
+
+from oauth.utils import oauth_token
 from users.models import User
 
 
@@ -108,16 +110,8 @@ class RegiserUserSerializer(serializers.ModelSerializer):
         # 我们需要加密
         user.set_password(validated_data['password'])
         user.save()
-
-        # 用户入库之后 我们生成token
-        from rest_framework_jwt.settings import api_settings
-        # 4.1 需要使用jwt的两个方法
-        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-
-        # 4.2 让payload(载荷)盛放一些用户信息
-        payload = jwt_payload_handler(user)
-        token = jwt_encode_handler(payload)
+        # 生成token
+        token = oauth_token(user)
 
         user.token=token
 
