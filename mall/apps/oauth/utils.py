@@ -1,5 +1,5 @@
 from rest_framework_jwt.settings import api_settings
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer,BadSignature
 from mall import settings
 
 def generate_token(user):
@@ -23,3 +23,15 @@ def generic_open_id(openid):
     })
     # 3 返回
     return token.decode()
+
+def check_access_token(access_token):
+    # 1 创建序列化器
+    s = Serializer(secret_key=settings.SECRET_KEY,expires_in=60*60)
+    # 2 对数据进行解码
+    try:
+        data = s.loads(access_token)
+    except BadSignature:
+        return None
+    # 3 返回openid
+    return data['openid']
+

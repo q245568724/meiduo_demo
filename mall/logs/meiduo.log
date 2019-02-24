@@ -630,3 +630,124 @@ INFO 2019-02-24 19:40:45,438 basehttp 124 "GET /verifications/imagecodes/84aa8d5
 INFO 2019-02-24 19:40:50,419 basehttp 124 "GET /verifications/smscodes/13422222222/?text=zlyj&image_code_id=84aa8d56-7d3c-4dc5-a802-14cce559b334 HTTP/1.1" 200 12
 INFO 2019-02-24 19:41:02,398 basehttp 124 "GET /users/usernames/iiiii/count/ HTTP/1.1" 200 30
 INFO 2019-02-24 19:41:17,810 basehttp 124 "POST /users/ HTTP/1.1" 200 222
+INFO 2019-02-24 20:20:42,084 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+INFO 2019-02-24 20:20:55,962 basehttp 124 "GET /oauth/qq/users/?code=D32EDEC3E000474D3785DD562AFD4AEB HTTP/1.1" 200 190
+ERROR 2019-02-24 20:20:55,994 basehttp 124 "GET /verifications/imagecodes/d89d112d-04b2-426c-bf2e-a80f0d4627c6/ HTTP/1.1" 507 35
+ERROR 2019-02-24 20:21:02,278 basehttp 124 "GET /verifications/imagecodes/9f12d709-de4d-42a7-aa26-d7c2343736a6/ HTTP/1.1" 507 35
+INFO 2019-02-24 20:24:39,660 basehttp 124 "GET /verifications/imagecodes/652ea4fe-d53b-48fe-af5e-e06d957ce5af/ HTTP/1.1" 200 3026
+INFO 2019-02-24 20:24:50,787 basehttp 124 "GET /verifications/smscodes/13111111111/?text=panw&image_code_id=652ea4fe-d53b-48fe-af5e-e06d957ce5af HTTP/1.1" 200 12
+INFO 2019-02-24 20:25:07,515 basehttp 124 "OPTIONS /oauth/qq/users/ HTTP/1.1" 200 0
+WARNING 2019-02-24 20:25:07,537 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 405 46
+INFO 2019-02-24 20:25:21,972 basehttp 124 "GET /verifications/imagecodes/0d28b593-c103-4225-88ae-485c1141fa74/ HTTP/1.1" 200 3104
+INFO 2019-02-24 21:27:50,276 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+INFO 2019-02-24 21:27:59,634 basehttp 124 "GET /oauth/qq/users/?code=376FD47B0844DCD8A85D80523B39F827 HTTP/1.1" 200 190
+ERROR 2019-02-24 21:27:59,754 basehttp 124 "GET /verifications/imagecodes/b29a1027-d5ca-403b-8def-7c44dc4b1a37/ HTTP/1.1" 507 35
+INFO 2019-02-24 21:28:45,982 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+INFO 2019-02-24 21:29:43,199 basehttp 124 "GET /oauth/qq/users/?code=137EAA61D17C3A940AA32B807A2A0B3E HTTP/1.1" 200 190
+ERROR 2019-02-24 21:29:43,412 basehttp 124 "GET /verifications/imagecodes/a9160a70-06ae-40fb-b454-c15425e87378/ HTTP/1.1" 507 35
+ERROR 2019-02-24 21:29:56,072 basehttp 124 "GET /verifications/imagecodes/6e1f7f85-5cc5-42b9-99e5-37683299d79d/ HTTP/1.1" 507 35
+ERROR 2019-02-24 21:29:56,594 basehttp 124 "GET /verifications/imagecodes/d5b64543-7a82-4df1-a95d-37e0896bf976/ HTTP/1.1" 507 35
+ERROR 2019-02-24 21:29:57,005 basehttp 124 "GET /verifications/imagecodes/224deb67-4b20-4b4c-bb5d-10ff7164a253/ HTTP/1.1" 507 35
+INFO 2019-02-24 21:30:10,536 basehttp 124 "GET /verifications/imagecodes/588e5da3-4c28-422d-b271-787f2ca9685a/ HTTP/1.1" 200 3222
+INFO 2019-02-24 21:30:15,878 basehttp 124 "GET /verifications/smscodes/13122222222/?text=nypu&image_code_id=588e5da3-4c28-422d-b271-787f2ca9685a HTTP/1.1" 200 12
+INFO 2019-02-24 21:30:50,348 basehttp 124 "OPTIONS /oauth/qq/users/ HTTP/1.1" 200 0
+ERROR 2019-02-24 21:31:38,076 exception 135 Internal Server Error: /oauth/qq/users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/oauth/views.py", line 96, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/serializers.py", line 230, in is_valid
+    'Cannot call `.is_valid()` as no `data=` keyword argument was '
+AssertionError: Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+ERROR 2019-02-24 21:31:38,505 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 500 19157
+WARNING 2019-02-24 21:34:25,664 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 43
+WARNING 2019-02-24 21:36:37,707 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 49
+WARNING 2019-02-24 21:37:50,036 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 49
+WARNING 2019-02-24 21:38:45,602 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 49
+INFO 2019-02-24 21:38:59,755 basehttp 124 "GET /verifications/imagecodes/eaa9dba8-f3df-48fd-acaf-bc86365613a0/ HTTP/1.1" 200 3226
+INFO 2019-02-24 21:39:02,657 basehttp 124 "GET /verifications/smscodes/13122222222/?text=nypu&image_code_id=eaa9dba8-f3df-48fd-acaf-bc86365613a0 HTTP/1.1" 200 12
+ERROR 2019-02-24 21:39:35,804 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 507 35
+ERROR 2019-02-24 21:40:38,151 exception 135 Internal Server Error: /oauth/qq/users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/oauth/views.py", line 65, in get
+    token = oauth.get_access_token(code)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2019-02-24 21:40:39,153 basehttp 124 "GET /oauth/qq/users/?code=137EAA61D17C3A940AA32B807A2A0B3E HTTP/1.1" 500 19016
+INFO 2019-02-24 21:40:57,315 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+INFO 2019-02-24 21:41:10,379 basehttp 124 "GET /oauth/qq/users/?code=2700779A2E2F1FC485285C2266758B6D HTTP/1.1" 200 190
+INFO 2019-02-24 21:41:10,488 basehttp 124 "GET /verifications/imagecodes/9108eb1a-31a4-41ca-9550-1e006311a1f8/ HTTP/1.1" 200 3106
+INFO 2019-02-24 21:41:27,299 basehttp 124 "GET /verifications/smscodes/13111111111/?text=ntaz&image_code_id=9108eb1a-31a4-41ca-9550-1e006311a1f8 HTTP/1.1" 200 12
+INFO 2019-02-24 21:41:39,693 basehttp 124 "OPTIONS /oauth/qq/users/ HTTP/1.1" 200 0
+ERROR 2019-02-24 21:42:04,713 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 507 35
+INFO 2019-02-24 21:44:53,298 basehttp 124 "GET /verifications/imagecodes/925e11f7-9a8f-43a6-9665-748ada6e32b0/ HTTP/1.1" 200 3186
+INFO 2019-02-24 21:45:02,118 basehttp 124 "GET /verifications/smscodes/13111111111/?text=5ths&image_code_id=925e11f7-9a8f-43a6-9665-748ada6e32b0 HTTP/1.1" 200 12
+ERROR 2019-02-24 21:45:11,077 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 507 35
+WARNING 2019-02-24 21:45:14,784 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 49
+INFO 2019-02-24 21:45:41,502 basehttp 124 "GET /verifications/imagecodes/a434ae2c-4660-406a-8d86-0a42cb1d2c31/ HTTP/1.1" 200 3039
+INFO 2019-02-24 21:46:03,096 basehttp 124 "GET /verifications/smscodes/13111111111/?text=alrs&image_code_id=a434ae2c-4660-406a-8d86-0a42cb1d2c31 HTTP/1.1" 200 12
+ERROR 2019-02-24 21:46:15,818 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 507 35
+WARNING 2019-02-24 21:47:13,558 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 400 49
+INFO 2019-02-24 21:47:18,832 basehttp 124 "GET /verifications/smscodes/13111111111/?text=alrs&image_code_id=a434ae2c-4660-406a-8d86-0a42cb1d2c31 HTTP/1.1" 200 12
+ERROR 2019-02-24 21:48:09,451 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 507 35
+INFO 2019-02-24 21:53:03,038 basehttp 124 "GET /verifications/imagecodes/3887ab0d-1444-4490-80f0-c24180424838/ HTTP/1.1" 200 3450
+INFO 2019-02-24 21:53:03,366 basehttp 124 "GET /verifications/imagecodes/f28063a6-127d-4483-a4f9-62a85569f588/ HTTP/1.1" 200 3125
+INFO 2019-02-24 21:53:03,449 basehttp 124 "GET /verifications/imagecodes/39299bd0-e313-4d2d-a229-cf165552db4f/ HTTP/1.1" 200 3252
+INFO 2019-02-24 21:53:08,196 basehttp 124 "GET /verifications/smscodes/13111111111/?text=eugd&image_code_id=39299bd0-e313-4d2d-a229-cf165552db4f HTTP/1.1" 200 12
+INFO 2019-02-24 21:53:20,662 basehttp 124 "OPTIONS /oauth/qq/users/ HTTP/1.1" 200 0
+ERROR 2019-02-24 21:54:15,260 exception 135 Internal Server Error: /oauth/qq/users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo/meiduo_demo/mall/apps/oauth/views.py", line 102, in post
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/settings.py", line 216, in __getattr__
+    raise AttributeError("Invalid API setting: '%s'" % attr)
+AttributeError: Invalid API setting: 'JWT_PAYLOAD_HANDLER'
+ERROR 2019-02-24 21:54:15,667 basehttp 124 "POST /oauth/qq/users/ HTTP/1.1" 500 19026

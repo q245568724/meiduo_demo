@@ -8,7 +8,8 @@ from mall import settings
 from rest_framework import status
 
 from oauth.models import OAuthQQUser
-from oauth.utils import oauth_token, generate_token, generic_open_id
+from oauth.serializers import OAuthQQUserSerializer
+from oauth.utils import  generate_token, generic_open_id
 
 """
 当用户点击qq按钮的时候,会发送一个请求,
@@ -23,7 +24,7 @@ class OauthQQURLAPIView(APIView):
     def get(self,request):
 
         # auth_url = 'http://www.meiduo.site:8080/oauth_callback.html'
-        state = 'test'
+        state = '/'
         # 1 创建oauth对象
         oauth = OAuthQQ(client_id=settings.QQ_CLIENT_ID,
                         client_secret=settings.QQ_CLIENT_SECRET,
@@ -80,11 +81,44 @@ class OAuthQQUserAPIView(APIView):
         else:
             # 生成token
             token = generate_token(qquser.user)
+
             return Response({
                 'token':token,
                 'username':qquser.user.username,
-                'user_id':qquser.user.id
-            })
+                'user_id':qquser.user.id})
 
 
+    def post(self,request):
+        # 1 接受数据
+        data = request.data
+        # 2 校验数据
+        serializer = OAuthQQUserSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        # 3 数据入库
+        qquser = serializer.save()
+        # 4 返回响应,应该有token数据
+        from rest_framework.settings import api_settings
+        # 4.1 需要使用jwt的两个方法
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
+        # 4.2 让payload(载荷)盛放一些用户信息
+        payload = jwt_payload_handler(qquser.user)
+        token = jwt_encode_handler(payload)
+
+        return Response({
+            'token':token,
+            'username':qquser.user.username,
+            'user_id':qquser.user.id
+        })
+
+"""
+当用户点击绑定的时候,我们需要将手机号,密码,短信验证码和加密的openid传递过来
+
+1 接受数据
+2 校验数据
+3 数据入库
+4 返回响应
+
+POST  /
+"""

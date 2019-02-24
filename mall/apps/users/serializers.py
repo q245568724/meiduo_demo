@@ -2,7 +2,8 @@ import re
 from rest_framework import serializers
 from django_redis import get_redis_connection
 
-from oauth.utils import oauth_token
+# from oauth.utils import oauth_token
+from oauth.utils import generate_token
 from users.models import User
 
 
@@ -111,7 +112,7 @@ class RegiserUserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         # 生成token
-        token = oauth_token(user)
+        token = generate_token(user)
 
         user.token=token
 
