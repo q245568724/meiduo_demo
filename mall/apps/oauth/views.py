@@ -6,6 +6,9 @@ from rest_framework.views import APIView
 from QQLoginTool.QQtool import OAuthQQ
 from mall import settings
 from rest_framework import status
+
+from oauth.models import OAuthQQUser
+
 """
 当用户点击qq按钮的时候,会发送一个请求,
 我们后端返回给它一个url (URL是根据文档拼接出来的)
@@ -60,4 +63,29 @@ class OAuthQQUserAPIView(APIView):
         token = oauth.get_access_token(code)
         # 3 用token换openid
         openid = oauth.get_open_id(token)
-        pass
+        # 获取的openid有两种情况:
+        # 1 用户之前绑定过
+        # 2 用户之前没有绑定过
+        # 根据openid查询数据库
+        try:
+            qquser = OAuthQQUser.objects.get(openid=openid)
+        except OAuthQQUser.DoesNotExist:
+            # 不存在
+            return Response({'access_token':openid})
+        else:
+            # 存在,应该让用户登陆
+            from rest_framework_jwt.settings import api_settings
+            # 4.1 需要使用jwt的两个方法
+            jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+            jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
+            # 4.2 让payload(载荷)盛放一些用户信息
+            payload = jwt_payload_handler(qquser.user)
+            token = jwt_encode_handler(payload)
+            return Response({
+                'token':token,
+                'username':qquser.user.username,
+                'user_id':qquser.user.id
+            })
+
+
