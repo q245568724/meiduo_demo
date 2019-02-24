@@ -31,7 +31,6 @@ from django.contrib.auth.backends import ModelBackend
 class UsernameMobleModelBackend(ModelBackend):
 
     def authenticate(self, request, username=None, password=None, **kwargs):
-
         #1 根据用户名确认用户输入的是手机号还是用户名
         # try:
         #     if re.match(r'1[3-9]\d{9}',username):
