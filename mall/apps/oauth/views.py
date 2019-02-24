@@ -59,5 +59,5 @@ class OAuthQQUserAPIView(APIView):
                         redirect_uri=settings.QQ_REDIRECT_URI,)
         token = oauth.get_access_token(code)
         # 3 用token换openid
-
+        openid = oauth.get_open_id(token)
         pass
