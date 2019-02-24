@@ -567,3 +567,45 @@ WARNING 2019-02-23 21:38:32,239 basehttp 124 "POST /users/auths/ HTTP/1.1" 400 6
 INFO 2019-02-23 21:38:44,695 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
 INFO 2019-02-23 21:40:09,376 basehttp 124 "POST /users/auths/ HTTP/1.1" 200 207
 INFO 2019-02-24 12:38:00,031 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 62
+INFO 2019-02-24 15:51:47,725 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 28
+INFO 2019-02-24 15:52:55,382 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 35
+INFO 2019-02-24 16:07:47,555 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+INFO 2019-02-24 16:46:03,835 basehttp 124 "GET /oauth/qq/statues/?state=/ HTTP/1.1" 200 175
+ERROR 2019-02-24 16:47:42,141 exception 135 Internal Server Error: /oauth/qq/users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'code'
+ERROR 2019-02-24 16:47:42,540 basehttp 124 "GET /oauth/qq/users/?code=4AE4D983D39A930BC15D6EFA5DC9C402 HTTP/1.1" 500 18728
+ERROR 2019-02-24 16:48:44,751 exception 135 Internal Server Error: /oauth/qq/users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_meiduo/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-02-24 16:48:44,937 basehttp 124 "GET /oauth/qq/users/?code=85E3731D9225545C042A6D3CD73FE067 HTTP/1.1" 500 89507
