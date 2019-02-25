@@ -4,9 +4,10 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from QQLoginTool.QQtool import OAuthQQ
-from mall import settings
-from rest_framework import status
 
+from rest_framework import status
+from rest_framework.settings import api_settings
+from mall import settings
 from oauth.models import OAuthQQUser
 from oauth.serializers import OAuthQQUserSerializer
 from oauth.utils import  generate_token, generic_open_id
@@ -97,15 +98,7 @@ class OAuthQQUserAPIView(APIView):
         # 3 数据入库
         qquser = serializer.save()
         # 4 返回响应,应该有token数据
-        from rest_framework.settings import api_settings
-        # 4.1 需要使用jwt的两个方法
-        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-
-        # 4.2 让payload(载荷)盛放一些用户信息
-        payload = jwt_payload_handler(qquser.user)
-        token = jwt_encode_handler(payload)
-
+        token = generate_token(qquser.user)
         return Response({
             'token':token,
             'username':qquser.user.username,
@@ -120,5 +113,5 @@ class OAuthQQUserAPIView(APIView):
 3 数据入库
 4 返回响应
 
-POST  /
+POST
 """

@@ -63,7 +63,7 @@ class OAuthQQUserSerializer(serializers.Serializer):
                 username=validated_data.get('mobile'),
                 password=validated_data.get('password')
             )
-            pass
+
         qquser = OAuthQQUser.objects.create(
             user=user,
             openid=validated_data.get('openid')

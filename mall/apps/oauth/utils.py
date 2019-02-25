@@ -35,3 +35,4 @@ def check_access_token(access_token):
     # 3 返回openid
     return data['openid']
 
+

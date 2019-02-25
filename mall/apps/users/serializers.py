@@ -3,6 +3,8 @@ from rest_framework import serializers
 from django_redis import get_redis_connection
 
 # from oauth.utils import oauth_token
+from rest_framework.views import APIView
+
 from oauth.utils import generate_token
 from users.models import User
 
@@ -124,3 +126,12 @@ class RegiserUserSerializer(serializers.ModelSerializer):
 # p = Person()
 # p.name
 
+
+class UserCenterInfoSerializer(serializers.ModelSerializer):
+    """
+        用户详细信息序列化器
+        """
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'mobile', 'email',)

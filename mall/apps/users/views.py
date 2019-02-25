@@ -1,10 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from users.serializers import RegiserUserSerializer
+from users.serializers import RegiserUserSerializer, UserCenterInfoSerializer
 from .models import User
 
 """
@@ -64,3 +65,36 @@ class RegiserUserAPIView(APIView):
 2 token 怎么生成
 
 """
+
+"""
+个人中心的信息展示
+
+1 让前端传递用户信息
+2 根据用户信息来获取user
+3 将对象转换为字典数据
+
+GET    /users/infos/
+
+"""
+from rest_framework.permissions import IsAuthenticated
+# class UserCenterInfoAPIView(APIView):
+#
+#     permission_classes = [IsAuthenticated]
+#
+#     def get(self,request):
+#         # 1 获取用户信息
+#         user = request.user
+#         # 2 将模型转换为(JSON)
+#         serializer = UserCenterInfoSerializer(user)
+#         # 3 返回响应
+#         return Response(serializer.data)
+from rest_framework.generics import RetrieveAPIView
+class UserCenterInfoAPIView(RetrieveAPIView):
+
+    serializer_class = UserCenterInfoSerializer
+
+    # queryset = User.objects.all()
+    # 已有的父类不能满足我们的需求
+    def get_object(self):
+
+        return self.request.user
