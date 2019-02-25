@@ -113,19 +113,30 @@ class UserCenterInfoAPIView(RetrieveAPIView):
 
 PUT    /users/emails/
 """
-class UserEmailInfoAPIView(APIView):
+# class UserEmailInfoAPIView(APIView):
+#
+#     permission_classes = [IsAuthenticated]
+#
+#     def put(self,request):
+#         # 1 后端接收邮箱
+#         data = request.data
+#         # 2 校验
+#         serializer = UserEmailInfoSerializer(instance=request.user,data=data)
+#         serializer.is_valid(raise_exception=True)
+#         # 3 更新数据
+#         serializer.save()
+#         # 4 返回响应
+#         return Response(serializer.data)
+from rest_framework.generics import UpdateAPIView
+
+class UserEmailInfoAPIView(UpdateAPIView):
 
     permission_classes = [IsAuthenticated]
 
-    def put(self,request):
-        # 1 后端接收邮箱
-        data = request.data
-        # 2 校验
-        serializer = UserEmailInfoSerializer(instance=request.user,data=data)
-        serializer.is_valid(raise_exception=True)
-        # 3 更新数据
-        serializer.save()
-        # 4 返回响应
-        return Response(serializer.data)
-        pass
+    serializer_class = UserEmailInfoSerializer
+
+    def get_object(self):
+
+        return self.request.user
+
 
