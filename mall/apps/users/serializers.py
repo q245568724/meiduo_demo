@@ -129,9 +129,23 @@ class RegiserUserSerializer(serializers.ModelSerializer):
 
 class UserCenterInfoSerializer(serializers.ModelSerializer):
     """
-        用户详细信息序列化器
-        """
-
+    用户详细信息序列化器
+    """
     class Meta:
         model = User
-        fields = ('id', 'username', 'mobile', 'email',)
+        fields = ('id', 'username', 'mobile', 'email', 'email_active')
+
+
+class UserEmailInfoSerializer(serializers.ModelSerializer):
+    """
+    邮箱序列化器
+    """
+    class Meta:
+        model = User
+        fields = ('id', 'email')
+        extra_kwargs = {
+            'email': {
+                'required': True
+            }
+        }
+    pass

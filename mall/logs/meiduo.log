@@ -978,3 +978,14 @@ ERROR 2019-02-25 21:08:11,165 basehttp 124 "GET /users/infos/ HTTP/1.1" 500 1949
 INFO 2019-02-25 21:11:55,057 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 62
 INFO 2019-02-25 21:12:00,571 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 62
 INFO 2019-02-25 21:12:01,397 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 62
+INFO 2019-02-25 21:16:11,145 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 62
+INFO 2019-02-25 21:16:11,237 basehttp 124 "OPTIONS /users/browerhistories/ HTTP/1.1" 200 0
+WARNING 2019-02-25 21:16:11,321 base 152 Not Found: /users/browerhistories/
+WARNING 2019-02-25 21:16:11,325 basehttp 124 "GET /users/browerhistories/ HTTP/1.1" 404 2900
+INFO 2019-02-25 21:39:04,256 basehttp 124 "OPTIONS /users/emails/ HTTP/1.1" 200 0
+INFO 2019-02-25 21:39:21,581 basehttp 124 "PUT /users/emails/ HTTP/1.1" 200 35
+INFO 2019-02-25 21:42:16,174 basehttp 124 "OPTIONS /users/infos/ HTTP/1.1" 200 0
+INFO 2019-02-25 21:42:16,652 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 99
+INFO 2019-02-25 21:42:16,992 basehttp 124 "OPTIONS /users/browerhistories/ HTTP/1.1" 200 0
+WARNING 2019-02-25 21:42:17,137 base 152 Not Found: /users/browerhistories/
+WARNING 2019-02-25 21:42:17,162 basehttp 124 "GET /users/browerhistories/ HTTP/1.1" 404 3063

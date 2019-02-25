@@ -5,7 +5,7 @@ from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from users.serializers import RegiserUserSerializer, UserCenterInfoSerializer
+from users.serializers import RegiserUserSerializer, UserCenterInfoSerializer, UserEmailInfoSerializer
 from .models import User
 
 """
@@ -98,3 +98,34 @@ class UserCenterInfoAPIView(RetrieveAPIView):
     def get_object(self):
 
         return self.request.user
+
+
+"""
+当用户输入邮箱之后,点击保存的时候,
+我们需要将邮箱内容发送给后端,后端需要更新制定用户的email字段
+同时后端需要给这个邮箱发送一个激活链接
+当用户点击链接的时候,改变email_active的状态
+
+1 后端接收邮箱
+2 校验
+3 更新数据
+4 返回响应
+
+PUT    /users/emails/
+"""
+class UserEmailInfoAPIView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    def put(self,request):
+        # 1 后端接收邮箱
+        data = request.data
+        # 2 校验
+        serializer = UserEmailInfoSerializer(instance=request.user,data=data)
+        serializer.is_valid(raise_exception=True)
+        # 3 更新数据
+        serializer.save()
+        # 4 返回响应
+        return Response(serializer.data)
+        pass
+
