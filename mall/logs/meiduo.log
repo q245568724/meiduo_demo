@@ -989,3 +989,8 @@ INFO 2019-02-25 21:42:16,652 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 99
 INFO 2019-02-25 21:42:16,992 basehttp 124 "OPTIONS /users/browerhistories/ HTTP/1.1" 200 0
 WARNING 2019-02-25 21:42:17,137 base 152 Not Found: /users/browerhistories/
 WARNING 2019-02-25 21:42:17,162 basehttp 124 "GET /users/browerhistories/ HTTP/1.1" 404 3063
+INFO 2019-02-25 22:18:02,160 basehttp 124 "OPTIONS /users/infos/ HTTP/1.1" 200 0
+INFO 2019-02-25 22:18:02,946 basehttp 124 "GET /users/infos/ HTTP/1.1" 200 83
+INFO 2019-02-25 22:18:03,123 basehttp 124 "OPTIONS /users/browerhistories/ HTTP/1.1" 200 0
+WARNING 2019-02-25 22:18:03,314 base 152 Not Found: /users/browerhistories/
+WARNING 2019-02-25 22:18:03,343 basehttp 124 "GET /users/browerhistories/ HTTP/1.1" 404 3063

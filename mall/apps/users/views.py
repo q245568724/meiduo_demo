@@ -102,9 +102,9 @@ class UserCenterInfoAPIView(RetrieveAPIView):
 
 """
 当用户输入邮箱之后,点击保存的时候,
-我们需要将邮箱内容发送给后端,后端需要更新制定用户的email字段
-同时后端需要给这个邮箱发送一个激活链接
-当用户点击链接的时候,改变email_active的状态
+1 我们需要将邮箱内容发送给后端,后端需要更新制定用户的email字段
+2 同时后端需要给这个邮箱发送一个激活链接
+3 当用户点击链接的时候,改变email_active的状态
 
 1 后端接收邮箱
 2 校验
@@ -128,7 +128,6 @@ PUT    /users/emails/
 #         # 4 返回响应
 #         return Response(serializer.data)
 from rest_framework.generics import UpdateAPIView
-
 class UserEmailInfoAPIView(UpdateAPIView):
 
     permission_classes = [IsAuthenticated]

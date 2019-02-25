@@ -5,8 +5,10 @@ from django_redis import get_redis_connection
 # from oauth.utils import oauth_token
 from rest_framework.views import APIView
 
+from mall import settings
 from oauth.utils import generate_token
 from users.models import User
+from users.utils import generic_verify_url
 
 
 class RegiserUserSerializer(serializers.ModelSerializer):
@@ -148,4 +150,32 @@ class UserEmailInfoSerializer(serializers.ModelSerializer):
                 'required': True
             }
         }
-    pass
+
+    def update(self, instance, validated_data):
+
+        # 先把数据更新一下
+        email = validated_data.get('email')
+
+        instance.email=email
+        instance.save()
+        from django.core.mail import send_mail
+        # subject            主题
+        subject = '美多商场激活邮件'
+        # message,          内容
+        message = ''
+        # from_email,       谁发送的
+        from_email = settings.EMAIL_FROM
+        # recipient_list,   收件人列表
+        recipient_list = [email]
+
+        # user_id = 8
+        verify_url = generic_verify_url(instance.id)
+        from celery_tasks.mail.tasks import send_celery_email
+        send_celery_email.delay(subject,
+                                message,
+                                from_email,
+                                email,
+                                verify_url,
+                                recipient_list)
+
+        return instance
