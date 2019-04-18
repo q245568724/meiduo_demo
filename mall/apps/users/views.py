@@ -1,11 +1,13 @@
 from django.shortcuts import render
 
 # Create your views here.
+from rest_framework import status
 from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from users.serializers import RegiserUserSerializer, UserCenterInfoSerializer, UserEmailInfoSerializer
+from users.utils import check_token
 from .models import User
 
 """
@@ -138,4 +140,38 @@ class UserEmailInfoAPIView(UpdateAPIView):
 
         return self.request.user
 
+
+"""
+激活需求:
+当用户点击激活连接的时候,需要让前段接收到token信息
+然后让前段发送一个请求,这个请求包含token信息
+
+1 接受token信息
+2 对token进行解析
+3 解析获取user_id之后,进行查询
+4 修改状态
+5 返回响应
+
+GET    /users/emails/verification/
+
+
+"""
+
+class UserEmailVerificationAPIView(APIView):
+
+    def get(self,request):
+        # 1 接受token信息
+        token = request.query_params.get('token')
+        if token is None:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # 2 对token进行解析
+        user_id = check_token(token)
+        if user_id is None:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # 3 解析获取user_id之后,进行查询
+        user = User.objects.get(pk=user_id)
+        # 4 修改状态
+        user.email_active=True
+        # 5 返回响应
+        return Response({'msg':'ok'})
 

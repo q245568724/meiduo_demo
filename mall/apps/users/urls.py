@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from users.views import UserCenterInfoAPIView, UserEmailInfoAPIView
+from users.views import *
 from . import views
 from rest_framework_jwt.views import obtain_jwt_token
 
@@ -12,5 +12,5 @@ urlpatterns = [
     # jwt把用户名和密码给系统,让系统进行认证,认证成功之后jwt生成token
     url(r'^infos/', UserCenterInfoAPIView.as_view()),
     url(r'^emails/$',UserEmailInfoAPIView.as_view()),
-
+    url(r'^emails/verification/$',UserEmailVerificationAPIView.as_view()),
 ]
